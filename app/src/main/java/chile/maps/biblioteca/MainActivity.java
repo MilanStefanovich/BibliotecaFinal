@@ -89,12 +89,9 @@ public class MainActivity extends AppCompatActivity {
         String[] listaLibros = {"Farenheti","Revival","Tesla","Hola mundo", "Adios mundo"};
         int[] costolib= {5000,10000,23000, 5000,8000};
 
-
-
-        Intent i = new Intent(this, Libros_act.class);
+        Intent i = new Intent(this, GitHub_act.class);
         i.putExtra("libros", listaLibros);
         i.putExtra("precio", costolib);
-        Intent in = new Intent(this, GitHub_act.class);
-        startActivity(in);
+        startActivity(i);
     }
 }

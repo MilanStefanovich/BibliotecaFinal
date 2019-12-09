@@ -26,6 +26,7 @@
         android:id="@+id/spLibros"
         android:layout_width="296dp"
         android:layout_height="46dp"
+        android:onClick="NewSpiner"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.407"
