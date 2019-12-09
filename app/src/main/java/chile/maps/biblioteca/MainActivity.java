@@ -84,7 +84,17 @@ public class MainActivity extends AppCompatActivity {
         Intent i = new Intent(this, MapsActivity_act.class);
         startActivity(i);
     }
+    public void Github(View v)
+    {
+        String[] listaLibros = {"Farenheti","Revival","Tesla"};
+        int[] costolib= {5000,12000,25000};
 
 
 
+        Intent i = new Intent(this, Libros_act.class);
+        i.putExtra("libros", listaLibros);
+        i.putExtra("precio", costolib);
+        Intent in = new Intent(this, GitHub_act.class);
+        startActivity(in);
+    }
 }

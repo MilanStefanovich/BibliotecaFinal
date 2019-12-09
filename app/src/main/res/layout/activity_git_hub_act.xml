@@ -6,4 +6,30 @@
     android:layout_height="match_parent"
     tools:context=".GitHub_act">
 
+    <TextView
+        android:id="@+id/TvLibros"
+        android:layout_width="16dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="83dp"
+        android:layout_marginLeft="83dp"
+        android:layout_marginTop="68dp"
+        android:layout_marginEnd="312dp"
+        android:layout_marginRight="312dp"
+        android:layout_marginBottom="304dp"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/spLibros" />
+
+    <Spinner
+        android:id="@+id/spLibros"
+        android:layout_width="296dp"
+        android:layout_height="46dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.407"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.41" />
 </androidx.constraintlayout.widget.ConstraintLayout>
