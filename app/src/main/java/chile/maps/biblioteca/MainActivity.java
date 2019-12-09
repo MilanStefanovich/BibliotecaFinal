@@ -86,8 +86,8 @@ public class MainActivity extends AppCompatActivity {
     }
     public void Github(View v)
     {
-        String[] listaLibros = {"Farenheti","Revival","Tesla"};
-        int[] costolib= {5000,12000,25000};
+        String[] listaLibros = {"Farenheti","Revival","Tesla","Hola mundo", "Adios mundo"};
+        int[] costolib= {5000,10000,23000, 5000,8000};
 
 
 

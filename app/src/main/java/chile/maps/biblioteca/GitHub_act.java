@@ -52,6 +52,15 @@ public class GitHub_act extends AppCompatActivity {
             int pr3 = precio[2];
             TvLibros.setText("El valor es "+pr3);
         }
+        if ( spLibros.getSelectedItem().equals("Hola mundo")){
+            int pr4 = precio[3];
+            TvLibros.setText("El valor es "+pr4);
+        }
+        if (spLibros.getSelectedItem().equals("Adios mundo")){
+            int pr5 = precio[4];
+            TvLibros.setText("El valor es "+pr5);
+        }
+
 
     }
 }
