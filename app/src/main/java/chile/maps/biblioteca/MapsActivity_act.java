@@ -1,7 +1,9 @@
 package chile.maps.biblioteca;
 
+import androidx.core.content.ContextCompat;
 import androidx.fragment.app.FragmentActivity;
 
+import android.Manifest;
 import android.os.Bundle;
 
 import com.google.android.gms.maps.CameraUpdateFactory;
@@ -40,8 +42,11 @@ public class MapsActivity_act extends FragmentActivity implements OnMapReadyCall
         mMap = googleMap;
 
         // Add a marker in Sydney and move the camera
-        LatLng sydney = new LatLng(-34, 151);
-        mMap.addMarker(new MarkerOptions().position(sydney).title("Marker in Sydney"));
-        mMap.moveCamera(CameraUpdateFactory.newLatLng(sydney));
+        LatLng camboya = new LatLng(12.705192, 104.946318);
+        mMap.addMarker(new MarkerOptions().position(camboya).title("ESTAS EN CAMBOYA"));
+        mMap.moveCamera(CameraUpdateFactory.newLatLng(camboya));
+        mMap.getUiSettings().setZoomControlsEnabled(true);
+
+
     }
 }

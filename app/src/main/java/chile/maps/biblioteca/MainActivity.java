@@ -86,10 +86,10 @@ public class MainActivity extends AppCompatActivity {
     }
     public void Github(View v)
     {
-        String[] listaLibros = {"Farenheti","Revival","Tesla","Hola mundo", "Adios mundo"};
-        int[] costolib= {5000,10000,23000, 5000,8000};
+        String[] listaLibros = {"Farenheti","Revival","Tesla"};
+        int[] costolib= {5000,10000,23000};
 
-        Intent i = new Intent(this, GitHub_act.class);
+        Intent i = new Intent(this, GithubDos_act.class);
         i.putExtra("libros", listaLibros);
         i.putExtra("precio", costolib);
         startActivity(i);

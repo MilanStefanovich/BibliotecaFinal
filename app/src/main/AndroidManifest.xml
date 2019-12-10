@@ -17,7 +17,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".GitHub_act"></activity>
+        <activity android:name=".GithubDos_act"></activity>
         <activity android:name=".Sec_act" />
         <!--
              The API key for Google Maps-based APIs is defined as a string resource.
