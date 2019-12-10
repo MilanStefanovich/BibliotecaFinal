@@ -17,23 +17,29 @@ public class GithubDos_act extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_github_dos_act);
 
+        spLibros2=(Spinner)findViewById(R.id.spLibros2);
+        TvLibros=(TextView)findViewById(R.id.TvLibros);
+
 
         Bundle listaLibros = this.getIntent().getExtras();
         String[] lib = listaLibros.getStringArray("libros");
 
-        ArrayAdapter adap = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_dropdown_item, lib);
+        ArrayAdapter adap = new ArrayAdapter<String>(this, android.R.layout.simple_expandable_list_item_1, lib);
         spLibros2.setAdapter(adap);
+
+        Bundle listaPrecio = getIntent().getExtras();
+        int[] precio = listaPrecio.getIntArray("precio");
 
 
 
         if (spLibros2.getSelectedItem().equals("Farenheti")){
-            TvLibros.setText("el libro seleccionado es: "+lib[0]+"y el precio es: ");//+precio[0]);
+            TvLibros.setText("el libro seleccionado es: "+lib[0]+" y el precio es: "+precio[0]);
         }
         if (spLibros2.getSelectedItem().equals("Revival")){
-            TvLibros.setText("el libro seleccionado es: "+lib[1]+"y el precio es: ");//+precio[1]);
+            TvLibros.setText("el libro seleccionado es: "+lib[1]+" y el precio es: "+precio[1]);
         }
         if (spLibros2.getSelectedItem().equals("Tesla")){
-            TvLibros.setText("el libro seleccionado es: "+lib[2]+"y el precio es: ");//+precio[2]);
+            TvLibros.setText("el libro seleccionado es: "+lib[2]+" y el precio es: "+precio[2]);
         }
     }
 }
