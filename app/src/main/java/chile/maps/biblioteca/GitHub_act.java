@@ -19,12 +19,6 @@ public class GitHub_act extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_git_hub_act);
-        spLibros  = (Spinner)findViewById(R.id.spLibros);
-        TvLibros  = (TextView) findViewById(R.id.TvLibros);
-
-        String dato = getIntent().getStringExtra("libros");
-        TvLibros.setText(dato);
-
 
 
         Bundle listaLibros = this.getIntent().getExtras();
@@ -35,32 +29,14 @@ public class GitHub_act extends AppCompatActivity {
 
 
 
-    }
-    public void NewSpiner(View view){
-        Bundle listaPrecio = getIntent().getExtras();
-        int[] precio = listaPrecio.getIntArray("precio");
-
         if (spLibros.getSelectedItem().equals("Farenheti")){
-            int pr1 = precio[0];
-            TvLibros.setText("El valor es "+pr1);
+            TvLibros.setText("el libro seleccionado es: "+lib[0]+"y el precio es: ");//+precio[0]);
         }
-        if ( spLibros.getSelectedItem().equals("Revival")){
-            int pr2 = precio[1];
-            TvLibros.setText("El valor es "+pr2);
+        if (spLibros.getSelectedItem().equals("Revival")){
+            TvLibros.setText("el libro seleccionado es: "+lib[1]+"y el precio es: ");//+precio[1]);
         }
         if (spLibros.getSelectedItem().equals("Tesla")){
-            int pr3 = precio[2];
-            TvLibros.setText("El valor es "+pr3);
+            TvLibros.setText("el libro seleccionado es: "+lib[2]+"y el precio es: ");//+precio[2]);
         }
-        if ( spLibros.getSelectedItem().equals("Hola mundo")){
-            int pr4 = precio[3];
-            TvLibros.setText("El valor es "+pr4);
-        }
-        if (spLibros.getSelectedItem().equals("Adios mundo")){
-            int pr5 = precio[4];
-            TvLibros.setText("El valor es "+pr5);
-        }
-
-
     }
 }
