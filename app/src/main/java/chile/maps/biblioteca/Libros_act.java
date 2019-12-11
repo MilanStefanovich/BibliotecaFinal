@@ -2,6 +2,7 @@ package chile.maps.biblioteca;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ArrayAdapter;
@@ -80,6 +81,11 @@ public class Libros_act extends AppCompatActivity {
         }
 
     }
+    public void LibroMqtt(View v){
+        Intent i = new Intent(this, Mqtt_act.class);
+        startActivity(i);
+    }
+
 }
 
 
