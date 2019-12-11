@@ -61,7 +61,7 @@ public class MainActivity extends AppCompatActivity {
 
         @Override
         protected void onPostExecute(String s) {
-            if (usuario.getText().toString().equalsIgnoreCase("user")
+            if (usuario.getText().toString().equals("user")
                     && (pass.getText().toString().equals("user"))) {
                 Intent i = new Intent(getBaseContext(), Home_act.class);
                 startActivity(i);
