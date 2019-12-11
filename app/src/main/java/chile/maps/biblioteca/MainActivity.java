@@ -13,7 +13,7 @@ import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
-    private EditText et1, et2;
+    private EditText usuario, pass;
     private ProgressBar pb;
     private Button btn;
 
@@ -22,8 +22,8 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        et1 = (EditText)findViewById(R.id.et1);
-        et2 = (EditText)findViewById(R.id.et2);
+        usuario = (EditText)findViewById(R.id.usuario);
+        pass = (EditText)findViewById(R.id.pass);
         btn = (Button)findViewById(R.id.btn);
         pb = (ProgressBar)findViewById(R.id.pb);
 
@@ -32,14 +32,13 @@ public class MainActivity extends AppCompatActivity {
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                new Task().execute(et1.getText().toString());
+                new Task().execute(usuario.getText().toString());
             }
         });
     }
 
 
-    class Task extends AsyncTask<String, Void, String>
-    {
+    class Task extends AsyncTask<String, Void, String> {
         @Override
         protected void onPreExecute() {
             super.onPreExecute();
@@ -51,13 +50,9 @@ public class MainActivity extends AppCompatActivity {
         @Override
         protected String doInBackground(String... strings) {
 
-            try
-            {
+            try {
                 Thread.sleep(5000);
-            }
-
-            catch (Exception e)
-            {
+            } catch (Exception e) {
                 e.printStackTrace();
             }
 
@@ -66,11 +61,13 @@ public class MainActivity extends AppCompatActivity {
 
         @Override
         protected void onPostExecute(String s) {
+            if (usuario.getText().toString().equalsIgnoreCase("user")
+                    && (pass.getText().toString().equalsIgnoreCase("user"))) {
+                Intent i = new Intent(getBaseContext(), Home_act.class);
+                startActivity(i);
 
-            Intent i = new Intent(getBaseContext(), Home_act.class);
-            startActivity(i);
-
-            pb.setVisibility(View.INVISIBLE);
+                pb.setVisibility(View.INVISIBLE);
+            }
         }
     }
 
@@ -92,6 +89,11 @@ public class MainActivity extends AppCompatActivity {
         Intent i = new Intent(this, GithubDos_act.class);
         i.putExtra("libros", listaLibros);
         i.putExtra("precio", costolib);
+        startActivity(i);
+    }
+    public void Alerta(View v)
+    {
+        Intent i = new Intent(this, Alerta_act.class);
         startActivity(i);
     }
 }

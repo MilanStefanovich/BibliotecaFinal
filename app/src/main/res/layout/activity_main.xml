@@ -16,28 +16,25 @@
         android:text="Log in"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.745"
+        app:layout_constraintHorizontal_bias="0.81"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.572" />
+        app:layout_constraintVertical_bias="0.484" />
 
     <LinearLayout
         android:id="@+id/linearLayout"
-        android:layout_width="300dp"
-        android:layout_height="102dp"
-        android:layout_marginStart="82dp"
-        android:layout_marginLeft="82dp"
-        android:layout_marginEnd="83dp"
-        android:layout_marginRight="83dp"
+        android:layout_width="238dp"
+        android:layout_height="99dp"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.578"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.407">
+        app:layout_constraintVertical_bias="0.345">
 
         <EditText
-            android:id="@+id/et1"
+            android:id="@+id/usuario"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
@@ -45,7 +42,7 @@
             android:inputType="textPersonName" />
 
         <EditText
-            android:id="@+id/et2"
+            android:id="@+id/pass"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
@@ -59,10 +56,10 @@
         android:layout_height="155dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintHorizontal_bias="0.564"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.135"
+        app:layout_constraintVertical_bias="0.048"
         app:srcCompat="@drawable/logo" />
 
     <ProgressBar
@@ -73,36 +70,48 @@
         android:layout_marginBottom="72dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.44"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.768" />
+        app:layout_constraintVertical_bias="0.705" />
 
     <ImageButton
         android:id="@+id/imageButton11"
-        android:layout_width="124dp"
-        android:layout_height="114dp"
+        android:layout_width="89dp"
+        android:layout_height="97dp"
         android:onClick="Maps"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.909"
+        app:layout_constraintHorizontal_bias="0.897"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.902"
+        app:layout_constraintVertical_bias="0.878"
         app:srcCompat="@drawable/google" />
 
     <ImageButton
         android:id="@+id/imageButton12"
-        android:layout_width="102dp"
-        android:layout_height="106dp"
+        android:layout_width="95dp"
+        android:layout_height="98dp"
         android:onClick="Github"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.11"
+        app:layout_constraintHorizontal_bias="0.117"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.891"
+        app:layout_constraintVertical_bias="0.862"
         app:srcCompat="@drawable/git" />
+
+    <ImageButton
+        android:id="@+id/imageButton8"
+        android:layout_width="42dp"
+        android:layout_height="47dp"
+        android:onClick="Alerta"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.044"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.311"
+        app:srcCompat="@drawable/alerta" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
 
