@@ -28,7 +28,7 @@ public class Mqtt_act extends AppCompatActivity {
         setContentView(R.layout.activity_mqtt_act);
 
         String clientId = MqttClient.generateClientId();
-        client = new MqttAndroidClient(this.getBaseContext(), MQTTHOST, clientId);
+        client = new MqttAndroidClient(this.getApplicationContext(), MQTTHOST, clientId);
         MqttConnectOptions options = new MqttConnectOptions();
         options.setUserName(USERNAME);
         options.setPassword(PASSWORD.toCharArray());
@@ -56,7 +56,7 @@ public class Mqtt_act extends AppCompatActivity {
         }
     }
 
-    public void libro1(View v){
+    public void libro1(View view){
         String topic = topicStr;
         String message ="Farenheith";
         try{
@@ -67,17 +67,19 @@ public class Mqtt_act extends AppCompatActivity {
         }
 
     }
-    public void libro2(View v){
-        String topic = topicStr;
-        String message ="Revival";
+    public void revival(View view)
+    {
+        String topic= topicStr;
+        String message="Revival";
         try{
-            client.publish(topic, message.getBytes(),0 ,false);
+            client.publish(topic,message.getBytes(),0,false);
         }
-        catch (Exception e){
+        catch (Exception e)
+        {
             e.printStackTrace();
         }
     }
-    public void libro3(View v){
+    public void libro3(View view){
         String topic = topicStr;
         String message ="El Alquimista";
         try{
@@ -87,7 +89,7 @@ public class Mqtt_act extends AppCompatActivity {
             e.printStackTrace();
         }
     }
-    public void libro4(View v){
+    public void libro4(View view){
         String topic = topicStr;
         String message ="El Poder";
         try{
@@ -97,7 +99,7 @@ public class Mqtt_act extends AppCompatActivity {
             e.printStackTrace();
         }
     }
-    public void libro5(View v){
+    public void libro5(View view){
         String topic = topicStr;
         String message ="Despertar";
         try{

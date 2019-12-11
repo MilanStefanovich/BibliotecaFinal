@@ -41,7 +41,7 @@
             android:id="@+id/button9"
             android:layout_width="match_parent"
             android:layout_height="58dp"
-            android:onClick="libro2"
+            android:onClick="revival"
             android:text="Revival" />
 
         <Button

@@ -67,6 +67,10 @@ public class Home_act extends AppCompatActivity {
         Intent i = new Intent(this, registro_act.class);
         startActivity(i);
     }
+    public void Sec(View v){
+        Intent i = new Intent(this, Sec_act.class);
+        startActivity(i);
+    }
 
 
 }
